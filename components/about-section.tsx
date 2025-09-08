@@ -47,11 +47,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 bg-black dotted-bg">
+    <section id="about" className="pt-12 pb-20 px-4 bg-black dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
           <span
-            className={`dotted-text text-glow ${nothing.className}`}
+            className={`text-4xl md:text-5xl font-mono font-bold text-center mb-12 tracking-wider text-white ${nothing.className}`}
             data-text="ABOUT"
           >
             ABOUT
