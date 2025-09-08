@@ -214,3 +214,174 @@
     backdrop-filter: blur(10px);
   }
 }
+
+/* --- Nothing-style dotted scan over live text --- */
+
+/* 1) Keep the base text visible */
+.typing {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  color: currentColor; /* inherits your theme color */
+}
+
+/* Also support .nothing-glyph class used in the hero component */
+.nothing-glyph {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  /* force base glyph fill transparent so overlays (before/after) render visibly */
+  color: transparent !important;
+  z-index: 0;
+}
+.nothing-glyph * {
+  color: transparent !important;
+}
+/* 2) Add a dotted overlay clipped to the text and animate a scan highlight */
+.typing::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* Two layers:
+     - Layer 1: dot grid
+     - Layer 2: a moving highlight mask */
+  background-image:
+    radial-gradient(circle, currentColor 1px, transparent 1px),
+    linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%);
+  background-size:
+    3px 3px,         /* dot size / spacing */
+    200% 100%;       /* wide highlight that sweeps across */
+  background-position:
+    0 0,             /* dot grid stays put */
+    -100% 0;         /* start highlight off-screen left */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* make overlay text transparent so only backgrounds show */
+  mix-blend-mode: normal;
+  z-index: 1;
+  animation: dot-scan 3.5s linear infinite;
+}
+
+/* Optional: subtle glow for the dots */
+.typing::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 3px 3px;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 4px currentColor);
+  opacity: 0.25; /* gentle */
+}
+
+/* Mirror overlay for .nothing-glyph so the effect shows on elements using that class */
+.nothing-glyph::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, currentColor 1px, transparent 1px),
+    linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%);
+  background-size:
+    3px 3px,
+    200% 100%;
+  background-position:
+    0 0,
+    -100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: normal;
+  z-index: 2;
+  animation: dot-scan 3.5s linear infinite;
+}
+
+.nothing-glyph::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 3px 3px;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 4px currentColor);
+  opacity: 0.25;
+  z-index: 1;
+}
+
+/* The highlight sweep */
+@keyframes dot-scan {
+  to {
+    background-position:
+      0 0,      /* dots stay fixed */
+      100% 0;   /* highlight sweeps to the right */
+  }
+}
+
+/* --- Bulb flicker effect for .nothing-glyph --- */
+/* Disable dotted overlay visuals for the bulb effect and apply glowing flicker */
+.nothing-glyph::before,
+.nothing-glyph::after {
+  background-image: none !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
+  content: none !important;
+}
+
+.nothing-glyph {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 24px rgba(255,255,255,0.6);
+  transition: color 120ms linear, text-shadow 120ms linear, filter 120ms linear;
+  animation: bulb-flicker 3.2s infinite;
+}
+
+@keyframes bulb-flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8);
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.6));
+  }
+  5% {
+    opacity: 0.9;
+    text-shadow: 0 0 6px rgba(255,255,255,0.7), 0 0 18px rgba(255,255,255,0.45);
+  }
+  10% {
+    opacity: 0.25;
+    text-shadow: none;
+    filter: none;
+  }
+  12% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 28px rgba(255,255,255,0.7);
+  }
+  30% {
+    opacity: 0.6;
+    text-shadow: 0 0 4px rgba(255,255,255,0.5);
+  }
+  50% {
+    opacity: 0.95;
+    text-shadow: 0 0 12px rgba(255,255,255,0.95), 0 0 32px rgba(255,255,255,0.7);
+  }
+  70% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+  85% {
+    opacity: 0.95;
+    text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 24px rgba(255,255,255,0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8);
+  }
+}

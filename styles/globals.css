@@ -124,3 +124,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Nothing-style dotted scan over live text */
+  .nothing-glyph {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    color: currentColor;
+    isolation: isolate; /* ensure pseudo z-index works predictably */
+  }
+
+
+
+
+    /* Nothing-style dotted scan is implemented in app/globals.css to ensure the effect is loaded by the layout. */
+}
