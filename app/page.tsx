@@ -4,6 +4,7 @@ import SkillsSection from "@/components/skills-section";
 import ProjectsSection from "@/components/projects-section";
 import ContactSection from "@/components/contact-section";
 import AppliedJobsSection from "@/components/applied-jobs-section";
+import ExperienceSection from "@/components/experience-section";
 
 export default function Portfolio() {
   return (
@@ -12,6 +13,7 @@ export default function Portfolio() {
       <AppliedJobsSection />
       <AboutSection />
       <SkillsSection />
+      <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
 

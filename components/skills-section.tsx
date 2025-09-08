@@ -53,54 +53,7 @@ export default function SkillsSection() {
           ))}
         </div>
 
-        <div className="mt-20 pt-20 border-t border-white/20">
-          <h3 className="text-3xl font-mono font-bold text-center mb-12 text-white tracking-wide">
-            EXPERIENCE TIMELINE
-          </h3>
-          <div className="space-y-8">
-            <div className="flex items-center gap-6 p-6 glass-card border-white/10 rounded-lg">
-              <div className="text-white/50 font-mono text-sm min-w-[100px]">
-                2024-NOW
-              </div>
-              <div className="flex-1">
-                <h4 className="text-white font-mono font-bold mb-2">
-                  Senior Full-Stack Developer
-                </h4>
-                <p className="text-white/70 text-sm">
-                  Leading mobile-first development initiatives, optimizing
-                  performance across platforms
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6 p-6 glass-card border-white/10 rounded-lg">
-              <div className="text-white/50 font-mono text-sm min-w-[100px]">
-                2022-2024
-              </div>
-              <div className="flex-1">
-                <h4 className="text-white font-mono font-bold mb-2">
-                  Frontend Architect
-                </h4>
-                <p className="text-white/70 text-sm">
-                  Built scalable component systems, reduced bundle sizes by 40%
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6 p-6 glass-card border-white/10 rounded-lg">
-              <div className="text-white/50 font-mono text-sm min-w-[100px]">
-                2020-2022
-              </div>
-              <div className="flex-1">
-                <h4 className="text-white font-mono font-bold mb-2">
-                  React Developer
-                </h4>
-                <p className="text-white/70 text-sm">
-                  Specialized in performance optimization and user experience
-                  enhancement
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  {/* Experience timeline extracted to its own component */}
       </div>
     </section>
   );
