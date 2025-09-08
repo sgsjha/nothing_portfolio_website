@@ -75,8 +75,8 @@ export default function HeroSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-4">
                 {/* Download resume button (file should live in /public/resume.pdf) */}
                 <a
-                  href="/resume.pdf"
-                  download
+                  href="/Sarthak Jha Nothing CV.pdf"
+                  download="Sarthak_Jha_Nothing_CV.pdf"
                   className="inline-flex items-center justify-center w-full sm:w-auto bg-white text-black hover:bg-white/90 font-mono tracking-wider px-6 py-3 text-sm md:text-base rounded-md glow-accent"
                 >
                   DOWNLOAD RESUME
