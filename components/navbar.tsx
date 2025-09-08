@@ -83,7 +83,7 @@ export default function Navbar() {
           <div
             className={`${nothing.className} text-sm opacity-80 select-none tracking-[.06em]`}
           >
-            NOTHING (R)
+            HIRE ME NOTHING
           </div>
           {/* Right: extra toggle (same as left) + bag icon (kept for symmetry) */}
           <div className="flex items-center gap-2">
@@ -155,10 +155,10 @@ export default function Navbar() {
 
           {/* Footer links */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[11px] tracking-wide text-zinc-600 dark:text-zinc-400">
-            <Link href="/account">ACCOUNT</Link>
-            <Link href="/community">COMMUNITY</Link>
-            <Link href="/stores">STORES</Link>
-            <Link href="/support">SUPPORT</Link>
+            <p>
+              © SARTHAK JHA 2025 BUILT WITH NOTHING IN MIND. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </div>

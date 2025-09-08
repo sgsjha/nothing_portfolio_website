@@ -96,7 +96,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   download
-                  className="w-full inline-flex items-center justify-center text-center font-mono bg-transparent border border-white/30 text-white px-4 py-3 rounded hover:bg-white/10"
+                  className="w-full inline-flex items-center justify-center text-center font-mono bg-white text-black hover:bg-white/90 glow-accent px-4 py-3 rounded"
                 >
                   <Download className="w-5 h-5 mr-3" />
                   DOWNLOAD RESUME

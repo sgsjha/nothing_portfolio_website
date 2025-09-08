@@ -22,7 +22,7 @@ export default function Portfolio() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <p className="text-white/70 font-mono text-sm tracking-wider mb-2">
-                © 2025 • BUILT WITH NOTHING IN MIND
+                © SARTHAK JHA 2025 • BUILT WITH NOTHING IN MIND
               </p>
               <p className="text-white/50 font-mono text-xs tracking-wider">
                 TRANSPARENT • MINIMAL • FUNCTIONAL
