@@ -1,17 +1,28 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Smartphone, Zap, Target, Layers, Cpu } from "lucide-react";
+import {
+  Code,
+  Smartphone,
+  Zap,
+  Target,
+  Layers,
+  Cpu,
+  GitBranch,
+  BookOpenCheck,
+} from "lucide-react";
+
+import { nothing } from "@/app/font";
 
 export default function AboutSection() {
   const principles = [
     {
       icon: Code,
       title: "Clean Code Advocate",
-      description: "Writing maintainable, scalable solutions",
+      description: "Writing readable, scalable and maintainable code",
     },
     {
       icon: Smartphone,
-      title: "Mobile-First Mindset",
-      description: "Optimizing for performance and user experience",
+      title: "Responsive Design Expert",
+      description: "Optimizing for every screen size",
     },
     {
       icon: Zap,
@@ -24,14 +35,14 @@ export default function AboutSection() {
       description: "Building interfaces that feel effortless",
     },
     {
-      icon: Layers,
-      title: "Transparent Architecture",
-      description: "Clear, understandable system design",
+      icon: GitBranch,
+      title: "Cross-Functional Collaborator",
+      description: "Working seamlessly with devs, designers, and marketing",
     },
     {
-      icon: Cpu,
-      title: "Innovation Driven",
-      description: "Pushing boundaries with cutting-edge tech",
+      icon: BookOpenCheck,
+      title: "Constant Learner",
+      description: "Always exploring new technologies and best practices",
     },
   ];
 
@@ -39,63 +50,82 @@ export default function AboutSection() {
     <section id="about" className="py-20 px-4 bg-black dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
-          <span className="dotted-text text-glow" data-text="ABOUT">
+          <span
+            className={`dotted-text text-glow ${nothing.className}`}
+            data-text="ABOUT"
+          >
             ABOUT
           </span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-stretch mb-16">
           <Card className="glass-card border-white/20">
             <CardHeader>
               <CardTitle className="font-mono text-2xl tracking-wide text-white">
                 Why Nothing?
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4 h-full flex flex-col justify-between">
               <p className="text-white/70 leading-relaxed">
-                I'm passionate about creating transparent, minimalist solutions
-                that prioritize user experience. My development philosophy
-                aligns perfectly with Nothing's commitment to removing
-                unnecessary complexity.
+                I want to work at Nothing because I’ve been fascinated by your
+                vision since the first phone launch, which stood out in a
+                saturated Android smartphone market. I also owned a pair of
+                <span
+                  className={`${nothing.className} text-glow font-bold inline-block mx-2`}
+                >
+                  NOTHING EAR
+                </span>
+                earbuds, and I’ve always admired how you make technology feel
+                unique, expressive, and design-led.
               </p>
               <p className="text-white/70 leading-relaxed">
-                With 5+ years of experience in mobile and web development, I
-                specialize in performance optimization, clean architecture, and
-                creating intuitive user interfaces that feel effortless.
+                I’ve also developed projects like StudySync and the Formula 1
+                Fastest Lap Simulator, which strengthened my skills in full -
+                stack software development, UI/UX design, and more expertise I’d
+                love to bring to a team that shares my passion for innovation.
               </p>
               <p className="text-white/70 leading-relaxed">
-                I believe in building technology that's honest, transparent, and
-                genuinely useful - just like Nothing's approach to design.
+                Looking for a role where I can contribute to something
+                meaningful, grow both personally and professionally, gain
+                mentorship from top developers, and what better place than
+                Nothing for the same.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="glass-card border-white/20">
+          <Card className="glass-card border-white/20 h-full">
             <CardHeader>
               <CardTitle className="font-mono text-2xl tracking-wide text-white">
-                My Approach
+                Who am I?
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4 h-full flex flex-col justify-between">
               <p className="text-white/70 leading-relaxed">
-                Every line of code should serve a purpose. I focus on creating
-                solutions that are not just functional, but elegant and
-                maintainable.
+                I’m a Computer Science graduate from the University of Liverpool
+                with experience as a Software Engineering Intern at VEC, where
+                I’ve built scalable front-end features using React, TypeScript,
+                Next.js, MongoDB and AWS.
               </p>
               <p className="text-white/70 leading-relaxed">
-                From React Native apps to complex web platforms, I've
-                consistently delivered products that users love and developers
-                can easily maintain.
+                I possess many software development skills including as you will
+                see, however my biggest weapon is my{" "}
+                <span
+                  className={`${nothing.className} text-glow font-bold inline-block mx-2`}
+                >
+                  ADAPTABILITY
+                </span>
+                . The power to figure things out. I might not have the answer
+                today, but I will in a few hours.
               </p>
               <div className="pt-4">
                 <div className="text-white font-mono text-sm mb-2">
                   CORE METRICS:
                 </div>
                 <div className="grid grid-cols-2 gap-4 text-white/70 font-mono text-sm">
-                  <div>• 40% Bundle Size Reduction</div>
-                  <div>• 99.9% Uptime Achievement</div>
-                  <div>• 50ms Average Load Time</div>
-                  <div>• 100% Accessibility Score</div>
+                  <div>• £4,000. Scholarship for Academic Excellence</div>
+                  <div>• Best Teaching Assistant Award by Department of CS</div>
+                  <div>• UI/UX Certification from Meta</div>
+                  <div>• Multitude of Projects on GitHub</div>
                 </div>
               </div>
             </CardContent>
