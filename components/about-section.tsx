@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code, Smartphone, Zap, Target, Layers, Cpu } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code, Smartphone, Zap, Target, Layers, Cpu } from "lucide-react";
 
 export default function AboutSection() {
   const principles = [
@@ -33,10 +33,10 @@ export default function AboutSection() {
       title: "Innovation Driven",
       description: "Pushing boundaries with cutting-edge tech",
     },
-  ]
+  ];
 
   return (
-    <section className="py-20 px-4 bg-black dotted-bg">
+    <section id="about" className="py-20 px-4 bg-black dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
           <span className="dotted-text text-glow" data-text="ABOUT">
@@ -47,39 +47,50 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
           <Card className="glass-card border-white/20">
             <CardHeader>
-              <CardTitle className="font-mono text-2xl tracking-wide text-white">Why Nothing?</CardTitle>
+              <CardTitle className="font-mono text-2xl tracking-wide text-white">
+                Why Nothing?
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-white/70 leading-relaxed">
-                I'm passionate about creating transparent, minimalist solutions that prioritize user experience. My
-                development philosophy aligns perfectly with Nothing's commitment to removing unnecessary complexity.
+                I'm passionate about creating transparent, minimalist solutions
+                that prioritize user experience. My development philosophy
+                aligns perfectly with Nothing's commitment to removing
+                unnecessary complexity.
               </p>
               <p className="text-white/70 leading-relaxed">
-                With 5+ years of experience in mobile and web development, I specialize in performance optimization,
-                clean architecture, and creating intuitive user interfaces that feel effortless.
+                With 5+ years of experience in mobile and web development, I
+                specialize in performance optimization, clean architecture, and
+                creating intuitive user interfaces that feel effortless.
               </p>
               <p className="text-white/70 leading-relaxed">
-                I believe in building technology that's honest, transparent, and genuinely useful - just like Nothing's
-                approach to design.
+                I believe in building technology that's honest, transparent, and
+                genuinely useful - just like Nothing's approach to design.
               </p>
             </CardContent>
           </Card>
 
           <Card className="glass-card border-white/20">
             <CardHeader>
-              <CardTitle className="font-mono text-2xl tracking-wide text-white">My Approach</CardTitle>
+              <CardTitle className="font-mono text-2xl tracking-wide text-white">
+                My Approach
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-white/70 leading-relaxed">
-                Every line of code should serve a purpose. I focus on creating solutions that are not just functional,
-                but elegant and maintainable.
+                Every line of code should serve a purpose. I focus on creating
+                solutions that are not just functional, but elegant and
+                maintainable.
               </p>
               <p className="text-white/70 leading-relaxed">
-                From React Native apps to complex web platforms, I've consistently delivered products that users love
-                and developers can easily maintain.
+                From React Native apps to complex web platforms, I've
+                consistently delivered products that users love and developers
+                can easily maintain.
               </p>
               <div className="pt-4">
-                <div className="text-white font-mono text-sm mb-2">CORE METRICS:</div>
+                <div className="text-white font-mono text-sm mb-2">
+                  CORE METRICS:
+                </div>
                 <div className="grid grid-cols-2 gap-4 text-white/70 font-mono text-sm">
                   <div>• 40% Bundle Size Reduction</div>
                   <div>• 99.9% Uptime Achievement</div>
@@ -99,13 +110,17 @@ export default function AboutSection() {
             >
               <principle.icon className="w-8 h-8 text-white flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-mono font-bold text-lg text-white mb-2">{principle.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{principle.description}</p>
+                <h3 className="font-mono font-bold text-lg text-white mb-2">
+                  {principle.title}
+                </h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  {principle.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

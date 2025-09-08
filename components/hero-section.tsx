@@ -4,7 +4,10 @@ import Spline from "@splinetool/react-spline/next";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black dotted-bg">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black dotted-bg"
+    >
       <div className="absolute top-20 left-20 w-16 h-16 border border-white/20 rounded-full float-animation" />
       <div className="absolute top-40 right-32 w-8 h-8 bg-white/10 rounded-full float-animation-delayed" />
       <div className="absolute bottom-32 left-1/4 w-12 h-12 border border-white/30 rounded-full float-animation-slow" />

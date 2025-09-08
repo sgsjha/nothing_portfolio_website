@@ -1,7 +1,13 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = [
@@ -25,7 +31,8 @@ export default function ProjectsSection() {
     },
     {
       title: "Real-time Collaboration Platform",
-      description: "WebRTC-based platform for seamless team communication with 99.9% uptime and sub-50ms latency.",
+      description:
+        "WebRTC-based platform for seamless team communication with 99.9% uptime and sub-50ms latency.",
       tech: ["WebRTC", "Socket.io", "React", "Redis"],
       link: "#",
       github: "#",
@@ -51,19 +58,20 @@ export default function ProjectsSection() {
     },
     {
       title: "Cross-Platform Mobile App",
-      description: "React Native app with 4.8★ rating, 100k+ downloads, and seamless iOS/Android experience.",
+      description:
+        "React Native app with 4.8★ rating, 100k+ downloads, and seamless iOS/Android experience.",
       tech: ["React Native", "TypeScript", "Redux", "Firebase"],
       link: "#",
       github: "#",
       featured: false,
     },
-  ]
+  ];
 
-  const featuredProjects = projects.filter((p) => p.featured)
-  const otherProjects = projects.filter((p) => !p.featured)
+  const featuredProjects = projects.filter((p) => p.featured);
+  const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section className="py-20 px-4 bg-black dotted-bg">
+    <section id="projects" className="py-20 px-4 bg-black dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
           <span className="dotted-text text-glow" data-text="PROJECTS">
@@ -72,7 +80,9 @@ export default function ProjectsSection() {
         </h2>
 
         <div className="mb-20">
-          <h3 className="text-2xl font-mono font-bold text-white mb-8 tracking-wide">FEATURED WORK</h3>
+          <h3 className="text-2xl font-mono font-bold text-white mb-8 tracking-wide">
+            FEATURED WORK
+          </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <Card
@@ -84,16 +94,25 @@ export default function ProjectsSection() {
                     <CardTitle className="font-mono text-xl tracking-wide text-white group-hover:text-white transition-colors">
                       {project.title}
                     </CardTitle>
-                    <Badge variant="secondary" className="bg-white/10 text-white border-white/20 text-xs">
+                    <Badge
+                      variant="secondary"
+                      className="bg-white/10 text-white border-white/20 text-xs"
+                    >
                       FEATURED
                     </Badge>
                   </div>
-                  <CardDescription className="text-white/70 leading-relaxed">{project.description}</CardDescription>
+                  <CardDescription className="text-white/70 leading-relaxed">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs font-mono border-white/30 text-white/80">
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="text-xs font-mono border-white/30 text-white/80"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -123,10 +142,15 @@ export default function ProjectsSection() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-mono font-bold text-white mb-8 tracking-wide">OTHER PROJECTS</h3>
+          <h3 className="text-2xl font-mono font-bold text-white mb-8 tracking-wide">
+            OTHER PROJECTS
+          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((project, index) => (
-              <Card key={index} className="glass-card border-white/10 hover:border-white/30 transition-colors group">
+              <Card
+                key={index}
+                className="glass-card border-white/10 hover:border-white/30 transition-colors group"
+              >
                 <CardHeader>
                   <CardTitle className="font-mono text-lg tracking-wide text-white group-hover:text-white transition-colors">
                     {project.title}
@@ -138,12 +162,19 @@ export default function ProjectsSection() {
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs font-mono border-white/20 text-white/70">
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="text-xs font-mono border-white/20 text-white/70"
+                      >
                         {tech}
                       </Badge>
                     ))}
                     {project.tech.length > 3 && (
-                      <Badge variant="outline" className="text-xs font-mono border-white/20 text-white/50">
+                      <Badge
+                        variant="outline"
+                        className="text-xs font-mono border-white/20 text-white/50"
+                      >
                         +{project.tech.length - 3}
                       </Badge>
                     )}
@@ -171,5 +202,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

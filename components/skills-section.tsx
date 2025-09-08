@@ -1,27 +1,56 @@
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 
 export default function SkillsSection() {
   const skillCategories = [
     {
       category: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "React Native", "WebGL", "Three.js"],
+      skills: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "React Native",
+        "WebGL",
+        "Three.js",
+      ],
     },
     {
       category: "Backend",
-      skills: ["Node.js", "Python", "PostgreSQL", "GraphQL", "REST APIs", "Microservices"],
+      skills: [
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "GraphQL",
+        "REST APIs",
+        "Microservices",
+      ],
     },
     {
       category: "DevOps & Tools",
-      skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Monitoring", "Performance"],
+      skills: [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Monitoring",
+        "Performance",
+      ],
     },
     {
       category: "Mobile & Performance",
-      skills: ["iOS", "Android", "PWA", "Optimization", "Bundle Analysis", "Core Web Vitals"],
+      skills: [
+        "iOS",
+        "Android",
+        "PWA",
+        "Optimization",
+        "Bundle Analysis",
+        "Core Web Vitals",
+      ],
     },
-  ]
+  ];
 
   return (
-    <section className="py-20 px-4 bg-gray-900/50 dotted-bg">
+    <section id="skills" className="py-20 px-4 bg-gray-900/50 dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
           <span className="dotted-text text-glow" data-text="SKILLS">
@@ -56,27 +85,43 @@ export default function SkillsSection() {
           </h3>
           <div className="space-y-8">
             <div className="flex items-center gap-6 p-6 glass-card border-white/10 rounded-lg">
-              <div className="text-white/50 font-mono text-sm min-w-[100px]">2024-NOW</div>
+              <div className="text-white/50 font-mono text-sm min-w-[100px]">
+                2024-NOW
+              </div>
               <div className="flex-1">
-                <h4 className="text-white font-mono font-bold mb-2">Senior Full-Stack Developer</h4>
+                <h4 className="text-white font-mono font-bold mb-2">
+                  Senior Full-Stack Developer
+                </h4>
                 <p className="text-white/70 text-sm">
-                  Leading mobile-first development initiatives, optimizing performance across platforms
+                  Leading mobile-first development initiatives, optimizing
+                  performance across platforms
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-6 p-6 glass-card border-white/10 rounded-lg">
-              <div className="text-white/50 font-mono text-sm min-w-[100px]">2022-2024</div>
+              <div className="text-white/50 font-mono text-sm min-w-[100px]">
+                2022-2024
+              </div>
               <div className="flex-1">
-                <h4 className="text-white font-mono font-bold mb-2">Frontend Architect</h4>
-                <p className="text-white/70 text-sm">Built scalable component systems, reduced bundle sizes by 40%</p>
+                <h4 className="text-white font-mono font-bold mb-2">
+                  Frontend Architect
+                </h4>
+                <p className="text-white/70 text-sm">
+                  Built scalable component systems, reduced bundle sizes by 40%
+                </p>
               </div>
             </div>
             <div className="flex items-center gap-6 p-6 glass-card border-white/10 rounded-lg">
-              <div className="text-white/50 font-mono text-sm min-w-[100px]">2020-2022</div>
+              <div className="text-white/50 font-mono text-sm min-w-[100px]">
+                2020-2022
+              </div>
               <div className="flex-1">
-                <h4 className="text-white font-mono font-bold mb-2">React Developer</h4>
+                <h4 className="text-white font-mono font-bold mb-2">
+                  React Developer
+                </h4>
                 <p className="text-white/70 text-sm">
-                  Specialized in performance optimization and user experience enhancement
+                  Specialized in performance optimization and user experience
+                  enhancement
                 </p>
               </div>
             </div>
@@ -84,5 +129,5 @@ export default function SkillsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
