@@ -152,7 +152,7 @@ export default function HeroSection() {
                     TypeScript
                   </span>
                   <span className="text-sm font-mono px-3 py-1.5 bg-gradient-to-r from-white/5 via-white/7 to-white/5 rounded-full text-white/90 ring-1 ring-white/5 backdrop-blur-sm transition-transform transform hover:scale-105">
-                    Tailwind CSS
+                    Vercel
                   </span>
                 </div>
               </div>
