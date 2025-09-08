@@ -5,12 +5,12 @@ import Link from "next/link";
 import { nothing } from "@/app/font";
 
 const NAV_ITEMS = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "#hero", label: "HOME" },
+  { href: "#about", label: "ABOUT" },
+  { href: "#skills", label: "SKILLS" },
+  { href: "#experience", label: "EXPERIENCE" },
+  { href: "#projects", label: "PROJECTS" },
+  { href: "#contact", label: "CONTACT" },
 ];
 
 export default function Navbar() {
