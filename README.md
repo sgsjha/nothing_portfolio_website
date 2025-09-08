@@ -16,7 +16,7 @@ Transparent, minimal, and playful — a portfolio that speaks Nothing.
 
 ---
 
-- Live: https://your-domain.vercel.app
+- Live: https://nothing-portfolio-website.vercel.app/
 
 ## ✨ Features
 
@@ -25,15 +25,6 @@ Transparent, minimal, and playful — a portfolio that speaks Nothing.
 - 📱 **Fully responsive:** stacked on mobile/tablet, 2-column on wide screens.
 - 🧩 **Composable UI:** shadcn/ui + Tailwind utilities.
 - 🌗 **Theming:** theme provider wired for future light/dark switching.
-
-## 🖼️ Screenshots
-
-<p align="center">
-  <img src="./public/screenshots/hero.png" alt="Hero" width="70%" />
-  <img src="./public/screenshots/projects.png" alt="Projects" width="70%" />
-  <br/>
-  <em>Hero and Projects</em>
-</p>
 
 ## 🛠 Tech Stack
 
@@ -172,4 +163,4 @@ Add to `globals.css` (already present in this repo):
 
 ---
 
-Built with **clarity, transparency, and creativity** — inspired by Nothing. ✨
+Built with **NOTHING** in mind (Literally)  ✨
