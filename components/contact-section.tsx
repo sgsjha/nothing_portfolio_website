@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Github, Linkedin, Download, MapPin, Clock } from "lucide-react";
+import { nothing } from "@/app/font";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-900/50 dotted-bg">
+    <section id="contact" className="py-20 px-4 bg-black dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
-          <span className="dotted-text text-glow" data-text="CONTACT">
+          <span
+            className={`text-4xl md:text-5xl font-mono font-bold text-center mb-12 tracking-wider text-white ${nothing.className}`}
+          >
             CONTACT
           </span>
         </h2>
@@ -16,12 +19,16 @@ export default function ContactSection() {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-mono font-bold text-white mb-4 tracking-wide">
-                Let's Build Something Transparent
+                I feel excited to contribue to Nothing
               </h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Ready to create solutions that prioritize user experience and
-                remove unnecessary complexity? I'm always interested in
-                discussing innovative projects and opportunities.
+                If you have reached the end of this website, Thank you for your
+                time!{" "}
+              </p>
+              <p className="text-white/70 leading-relaxed mb-6">
+                If you are from{" "}
+                <span className={nothing.className}>NOTHING</span>, feel free to
+                reach out :)
               </p>
               <p className="text-white/70 leading-relaxed">
                 Whether it's a mobile app, web platform, or performance
@@ -33,11 +40,11 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-white/70">
                 <MapPin className="w-5 h-5" />
-                <span className="font-mono">Available Worldwide (Remote)</span>
+                <span className="font-mono">Available to work in the UK</span>
               </div>
               <div className="flex items-center gap-4 text-white/70">
                 <Clock className="w-5 h-5" />
-                <span className="font-mono">UTC+0 Timezone</span>
+                <span className="font-mono">BST Timezone</span>
               </div>
             </div>
           </div>
@@ -54,46 +61,51 @@ export default function ContactSection() {
               </div>
 
               <div className="space-y-4">
-                <Button
-                  size="lg"
-                  className="w-full font-mono bg-white text-black hover:bg-white/90 glow-accent"
+                <a
+                  href="mailto:sarthakjhaa11@gmail.com"
+                  aria-label="Send email"
+                  className="w-full inline-flex items-center justify-center text-center font-mono bg-white text-black hover:bg-white/90 glow-accent px-4 py-3 rounded"
                 >
                   <Mail className="w-5 h-5 mr-3" />
                   SEND EMAIL
-                </Button>
+                </a>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="font-mono bg-transparent border-white/30 text-white hover:bg-white/10"
+                  <a
+                    href="https://github.com/sgsjha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 font-mono bg-transparent border border-white/30 text-white px-3 py-2 rounded hover:bg-white/10"
                   >
-                    <Github className="w-5 h-5 mr-2" />
+                    <Github className="w-5 h-5" />
                     GITHUB
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="font-mono bg-transparent border-white/30 text-white hover:bg-white/10"
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/sarthak-jhaa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 font-mono bg-transparent border border-white/30 text-white px-3 py-2 rounded hover:bg-white/10"
                   >
-                    <Linkedin className="w-5 h-5 mr-2" />
+                    <Linkedin className="w-5 h-5" />
                     LINKEDIN
-                  </Button>
+                  </a>
                 </div>
 
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full font-mono bg-transparent border-white/30 text-white hover:bg-white/10"
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="w-full inline-flex items-center justify-center text-center font-mono bg-transparent border border-white/30 text-white px-4 py-3 rounded hover:bg-white/10"
                 >
                   <Download className="w-5 h-5 mr-3" />
                   DOWNLOAD RESUME
-                </Button>
+                </a>
               </div>
 
               <div className="pt-6 border-t border-white/20 text-center">
                 <p className="text-white/50 font-mono text-xs tracking-wider">
-                  RESPONSE TIME: 24 HOURS
+                  LOOK FORWARD TO HEARING FROM YOU!
                 </p>
               </div>
             </CardContent>
