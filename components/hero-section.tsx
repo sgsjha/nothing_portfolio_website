@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="absolute top-1/2 right-20 w-6 h-6 bg-white/5 rounded-full float-animation" />
       <div className="absolute bottom-20 right-1/3 w-10 h-10 border border-white/15 rounded-full float-animation-delayed" />
 
-      <div className="absolute right-10 top-1/2 -translate-y-1/2 w-80 h-96 model-container rounded-2xl">
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 w-126 h-[40rem] model-container rounded-2xl">
         <div className="w-full h-full flex items-center justify-center text-white/30 font-mono text-sm">
           {/* Your Spline 3D model will go here */}
           <div className="text-center">
@@ -23,10 +23,10 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white -translate-x-32 md:-translate-x-64">
         <div className="mb-8">
           <h1
-            className={`text-6xl md:text-8xl ${nothing.className} font-bold mb-4 tracking-wider text-glow text-4xl`}
+            className={`text-6xl md:text-8xl ${nothing.className} font-bold mb-8 md:mb-10 tracking-wider text-glow text-4xl`}
           >
             <span
               className={`${nothing.className} nothing-glyph`}
