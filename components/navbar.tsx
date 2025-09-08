@@ -84,23 +84,41 @@ export default function Navbar() {
           >
             NOTHING (R)
           </div>
+          {/* Right: extra toggle (same as left) + bag icon (kept for symmetry) */}
+          <div className="flex items-center gap-2">
+            <button
+              aria-label={open ? "Close menu" : "Open menu"}
+              onClick={(e) => {
+                e.stopPropagation();
+                setOpen((v) => !v);
+              }}
+              className="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-zinc-700 dark:text-zinc-300 w-5 h-4"
+                width="22"
+                height="16"
+                viewBox="0 0 44.4 32.4"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect width="100%" height="100%" fill="none" />
+                <circle cx="6.2" cy="6.2" r="2.2" fill="currentColor" />
+                <circle cx="14.2" cy="6.2" r="2.2" fill="currentColor" />
+                <circle cx="22.2" cy="6.2" r="2.2" fill="currentColor" />
+                <circle cx="30.2" cy="6.2" r="2.2" fill="currentColor" />
+                <circle cx="38.2" cy="6.2" r="2.2" fill="currentColor" />
+                <circle cx="6.2" cy="26.2" r="2.2" fill="currentColor" />
+                <circle cx="14.2" cy="26.2" r="2.2" fill="currentColor" />
+                <circle cx="22.2" cy="26.2" r="2.2" fill="currentColor" />
+                <circle cx="30.2" cy="26.2" r="2.2" fill="currentColor" />
+                <circle cx="38.2" cy="26.2" r="2.2" fill="currentColor" />
+              </svg>
+            </button>
 
-          {/* Right: bag icon (no-op here, but kept for symmetry) */}
-          <button
-            aria-label="Cart"
-            className="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
-          >
-            <svg width="22" height="18" viewBox="0 0 22 18" fill="none">
-              <path
-                d="M3.5 6h15a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18.5 16h-15A1.5 1.5 0 0 1 2 14.5v-7A1.5 1.5 0 0 1 3.5 6Z"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeDasharray="0 4"
-              />
-            </svg>
-          </button>
+            {/* cart removed — right side only has the toggle now */}
+          </div>
         </div>
 
         {/* Divider when open */}
