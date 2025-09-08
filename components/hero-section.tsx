@@ -26,20 +26,42 @@ export default function HeroSection() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
         <div className="mb-8">
           <h1
-            className={`text-6xl md:text-8xl ${nothing.className} font-bold mb-4 tracking-wider text-glow nothing-glyph text-4xl`}
+            className={`text-6xl md:text-8xl ${nothing.className} font-bold mb-4 tracking-wider text-glow text-4xl`}
           >
             <span
               className={`${nothing.className} nothing-glyph`}
-              data-text="Sarthak Jha"
+              data-text={"SARTHAK"}
+              style={{ animationDelay: "0s" }}
             >
-              Sarthak Jha
+              SARTHAK
+            </span>
+            <span className="mx-2" />
+            <span
+              className={`${nothing.className} nothing-glyph`}
+              data-text={"JHA"}
+              style={{ animationDelay: "0.2s" }}
+            >
+              JHA
             </span>
           </h1>
           <h2
             className={`text-4xl md:text-6xl ${nothing.className} font-bold mb-6 tracking-wider text-glow`}
           >
-            <span className={nothing.className} data-text="PORTFOLIO">
-              Here's why NOTHING should hire me
+            <span>{"Here's why "}</span>
+            <span
+              className={`${nothing.className} nothing-glyph`}
+              data-text={"NOTHING"}
+              style={{ animationDelay: "0.4s" }}
+            >
+              NOTHING
+            </span>
+            <span>{" should "}</span>
+            <span
+              className={`${nothing.className} nothing-glyph`}
+              data-text={"hire me"}
+              style={{ animationDelay: "0.6s" }}
+            >
+              hire me
             </span>
           </h2>
         </div>
