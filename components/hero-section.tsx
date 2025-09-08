@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { nothing } from "@/app/font";
+import Spline from "@splinetool/react-spline/next";
 
 export default function HeroSection() {
   return (
@@ -11,15 +12,8 @@ export default function HeroSection() {
       <div className="absolute bottom-20 right-1/3 w-10 h-10 border border-white/15 rounded-full float-animation-delayed" />
 
       <div className="absolute right-8 top-1/2 -translate-y-1/2 w-126 h-[40rem] model-container rounded-2xl">
-        <div className="w-full h-full flex items-center justify-center text-white/30 font-mono text-sm">
-          {/* Your Spline 3D model will go here */}
-          <div className="text-center">
-            <div className="w-16 h-16 border border-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <div className="w-8 h-8 bg-white/10 rounded-full" />
-            </div>
-            <p>3D PHONE MODEL</p>
-            <p className="text-xs mt-1">SPLINE INTEGRATION</p>
-          </div>
+        <div className="w-full h-full">
+          <Spline scene="https://prod.spline.design/5hbfuX6XwdvzbH8h/scene.splinecode" />
         </div>
       </div>
 
