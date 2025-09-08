@@ -89,57 +89,6 @@ tailwind.config.ts
 tsconfig.json
 ```
 
-## 🔤 Fonts
-
-`app/fonts.ts` centralises font loading (Nothing dot font + fallback). Example:
-
-```ts
-// app/fonts.ts
-import localFont from "next/font/local";
-
-export const nothing = localFont({
-  src: [{ path: "./fonts/NothingDot-Bold.woff2", weight: "700" }],
-  display: "swap",
-  variable: "--font-nothing",
-});
-```
-
-Use it like:
-
-```tsx
-import { nothing } from "@/app/fonts";
-<h1 className={`${nothing.className} text-glow`}>SARTHAK JHA</h1>
-```
-
-## 🎥 Spline Embed
-
-```tsx
-import Spline from "@splinetool/react-spline/next";
-
-export default function Phone3D() {
-  return (
-    <div className="relative w-full max-w-[28rem] aspect-[9/16] rounded-2xl overflow-hidden">
-      <Spline scene="https://prod.spline.design/5hbfuX6XwdvzbH8h/scene.splinecode" />
-    </div>
-  );
-}
-```
-
-## 🎨 Utility Classes
-
-Add to `globals.css` (already present in this repo):
-
-```css
-/* dotted background */
-.dotted-bg {
-  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-/* glow text */
-.text-glow {
-  text-shadow: 0 0 12px rgba(255,255,255,.45), 0 0 32px rgba(255,255,255,.25);
-}
-```
 
 ## 📦 Scripts
 
@@ -147,13 +96,6 @@ Add to `globals.css` (already present in this repo):
 - `build` – production build  
 - `start` – run prod server  
 - `lint` – lint codebase
-
-## 🗺 Roadmap
-
-- [ ] Project detail pages with case studies  
-- [ ] Theme toggle (light/dark)  
-- [ ] MDX notes/blog (`/notes`)  
-- [ ] Contact form (Resend / Formspree)
 
 ## 📬 Contact
 
