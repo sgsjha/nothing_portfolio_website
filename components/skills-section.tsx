@@ -1,59 +1,33 @@
 import { Badge } from "@/components/ui/badge";
+import { nothing } from "@/app/font";
 
 export default function SkillsSection() {
   const skillCategories = [
     {
-      category: "Frontend",
-      skills: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "React Native",
-        "WebGL",
-        "Three.js",
-      ],
+      category: "Languages",
+      skills: ["JavaScript", "TypeScript", "Python", "HTML/CSS", "Swift"],
     },
     {
-      category: "Backend",
-      skills: [
-        "Node.js",
-        "Python",
-        "PostgreSQL",
-        "GraphQL",
-        "REST APIs",
-        "Microservices",
-      ],
+      category: "Frontend",
+      skills: ["React.js", "Next.js", "Tailwind CSS", "Shadcn UI", "Figma"],
     },
     {
       category: "DevOps & Tools",
-      skills: [
-        "AWS",
-        "Docker",
-        "Kubernetes",
-        "CI/CD",
-        "Monitoring",
-        "Performance",
-      ],
+      skills: ["AWS", "Jira", "GitHub Copilot", "Git & GitHub", "Bitbucket"],
     },
     {
-      category: "Mobile & Performance",
-      skills: [
-        "iOS",
-        "Android",
-        "PWA",
-        "Optimization",
-        "Bundle Analysis",
-        "Core Web Vitals",
-      ],
+      category: "Backend & Databases",
+      skills: ["Node.js", "Firebase", "REST APIs", "MySQL", "MongoDB"],
     },
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gray-900/50 dotted-bg">
+    <section id="skills" className="py-20 px-4 bg-black dotted-bg">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-mono font-bold text-center mb-16 tracking-wider text-white">
-          <span className="dotted-text text-glow" data-text="SKILLS">
+          <span
+            className={`text-4xl md:text-5xl font-mono font-bold text-center mb-12 tracking-wider text-white ${nothing.className}`}
+          >
             SKILLS
           </span>
         </h2>
