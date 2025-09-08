@@ -44,7 +44,7 @@ export default function Navbar() {
         aria-expanded={open}
       >
         {/* Bar header */}
-        <div className="px-5 py-3 flex items-center justify-between gap-4">
+        <div className="px-5 py-3 flex items-center justify-between gap-4 relative">
           {/* Left: dotted hamburger */}
           <button
             aria-label={open ? "Close menu" : "Open menu"}
@@ -52,14 +52,30 @@ export default function Navbar() {
               e.stopPropagation(); // keep outside-click handler from firing
               setOpen((v) => !v);
             }}
-            className="grid grid-cols-4 grid-rows-3 gap-[2px] p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
+            className="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
           >
-            {Array.from({ length: 12 }).map((_, i) => (
-              <span
-                key={i}
-                className="block h-[3px] w-[3px] rounded-full bg-zinc-600 dark:bg-zinc-400"
-              />
-            ))}
+            {/* inline hamburger-dots SVG from project root */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-zinc-700 dark:text-zinc-300 w-5 h-4"
+              width="22"
+              height="16"
+              viewBox="0 0 44.4 32.4"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="none" />
+              <circle cx="6.2" cy="6.2" r="2.2" fill="currentColor" />
+              <circle cx="14.2" cy="6.2" r="2.2" fill="currentColor" />
+              <circle cx="22.2" cy="6.2" r="2.2" fill="currentColor" />
+              <circle cx="30.2" cy="6.2" r="2.2" fill="currentColor" />
+              <circle cx="38.2" cy="6.2" r="2.2" fill="currentColor" />
+              <circle cx="6.2" cy="26.2" r="2.2" fill="currentColor" />
+              <circle cx="14.2" cy="26.2" r="2.2" fill="currentColor" />
+              <circle cx="22.2" cy="26.2" r="2.2" fill="currentColor" />
+              <circle cx="30.2" cy="26.2" r="2.2" fill="currentColor" />
+              <circle cx="38.2" cy="26.2" r="2.2" fill="currentColor" />
+            </svg>
           </button>
 
           {/* Center: brand */}
