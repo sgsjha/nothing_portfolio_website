@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { nothing } from "./font";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import AnalyticsLazy from "../components/analytics-lazy";
 
 export const metadata: Metadata = {
   title: "v0 App",
@@ -32,19 +32,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
           media="(min-width: 769px)"
         />
-        {/* Preload an optional mobile scene (if you provide one) on small viewports */}
-        <link
-          rel="preload"
-          href="https://prod.spline.design/5hbfuX6XwdvzbH8h/scene.splinecode"
-          as="fetch"
-          crossOrigin="anonymous"
-          media="(max-width: 768px)"
-        />
       </head>
       <body className={`font-sans ${nothing.variable}`}>
         <Navbar />
         {children}
-        <Analytics />
+        <AnalyticsLazy />
       </body>
     </html>
   );

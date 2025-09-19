@@ -10,12 +10,24 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-black">
       <HeroSection />
-      <AppliedJobsSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
+      <div className="cv-auto">
+        <AppliedJobsSection />
+      </div>
+      <div className="cv-auto">
+        <AboutSection />
+      </div>
+      <div className="cv-auto">
+        <SkillsSection />
+      </div>
+      <div className="cv-auto">
+        <ExperienceSection />
+      </div>
+      <div className="cv-auto">
+        <ProjectsSection />
+      </div>
+      <div className="cv-auto">
+        <ContactSection />
+      </div>
 
       <footer className="py-12 px-4 border-t border-white/20 bg-black dotted-bg">
         <div className="max-w-6xl mx-auto">
