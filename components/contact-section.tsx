@@ -92,10 +92,10 @@ export default function ContactSection() {
                 </div>
 
                 <a
-                  href="/Sarthak Jha Nothing CV.pdf"
+                  href="/Sarthak Jha Nothing CV V2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  download="Sarthak_Jha_Nothing_CV.pdf"
+                  download="Sarthak_Jha_Nothing_CV_V2.pdf"
                   className="w-full inline-flex items-center justify-center text-center font-mono bg-white text-black hover:bg-white/90 glow-accent px-4 py-3 rounded"
                 >
                   <Download className="w-5 h-5 mr-3" />
