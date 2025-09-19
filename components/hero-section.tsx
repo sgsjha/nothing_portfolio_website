@@ -1,5 +1,5 @@
 import { nothing } from "@/app/font";
-import Spline from "@splinetool/react-spline/next";
+import SplineLazy from "./spline-lazy";
 
 export default function HeroSection() {
   return (
@@ -171,7 +171,10 @@ export default function HeroSection() {
               aria-label="Nothing Phone 3D model"
             >
               <div className="absolute inset-0">
-                <Spline scene="https://prod.spline.design/5hbfuX6XwdvzbH8h/scene.splinecode" />
+                <SplineLazy
+                  scene="https://prod.spline.design/5hbfuX6XwdvzbH8h/scene.splinecode"
+                  mobileScene="https://prod.spline.design/5hbfuX6XwdvzbH8h/scene.splinecode"
+                />
               </div>
             </div>
           </div>
